@@ -26,6 +26,7 @@ use GuzzleHttp\Psr7\Response;
  *
  * @package   tiny_powerbi
  * @category  test
+ * @covers    \tiny_powerbi\external\browse
  * @copyright 2026 Pedro Lois {@link https://github.com/pedrolois}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

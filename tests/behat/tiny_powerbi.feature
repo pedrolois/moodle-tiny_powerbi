@@ -16,9 +16,10 @@ Feature: Insert Power BI reports from the TinyMCE editor
       | user     | course | role           |
       | teacher1 | C1     | editingteacher |
       | student1 | C1     | student        |
+    # The editor is TinyMCE only for HTML content (contentformat 1).
     And the following "activities" exist:
-      | activity | course | name         | content          |
-      | page     | C1     | Results page | <p>Results:</p> |
+      | activity | course | name         | content         | contentformat |
+      | page     | C1     | Results page | <p>Results:</p> | 1             |
     And the "powerbi" filter is "on"
 
   Scenario: A teacher inserts a report filtered by the course

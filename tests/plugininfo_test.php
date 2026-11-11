@@ -21,6 +21,7 @@ namespace tiny_powerbi;
  *
  * @package   tiny_powerbi
  * @category  test
+ * @covers    \tiny_powerbi\plugininfo
  * @copyright 2026 Pedro Lois {@link https://github.com/pedrolois}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
