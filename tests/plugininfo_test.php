@@ -29,6 +29,8 @@ namespace tiny_powerbi;
 final class plugininfo_test extends \advanced_testcase {
     /**
      * Teachers get the button while the Power BI filter is on; students never.
+     *
+     * @covers \tiny_powerbi\plugininfo
      */
     public function test_is_enabled(): void {
         global $CFG;
@@ -55,6 +57,8 @@ final class plugininfo_test extends \advanced_testcase {
 
     /**
      * The editor learns whether reports can be browsed, the default mode and the filters offered.
+     *
+     * @covers \tiny_powerbi\plugininfo
      */
     public function test_configuration(): void {
         $this->resetAfterTest();

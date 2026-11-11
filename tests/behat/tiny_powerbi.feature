@@ -25,13 +25,13 @@ Feature: Insert Power BI reports from the TinyMCE editor
   Scenario: A teacher inserts a report filtered by the course
     Given I am on the "Results page" "page activity editing" page logged in as teacher1
     When I click on the "Power BI report" button for the "Page content" TinyMCE editor
-    And I set the following fields in the "Power BI report" "dialogue" to these values:
-      | Report link       | https://app.powerbi.com/groups/me/reports/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/ReportSection1 |
-      | Title             | Course enrolments                                                                            |
-      | Height (pixels)   | 450                                                                                          |
-      | Filter the report by | This course                                                                               |
-      | Table             | Course Info                                                                                  |
-      | Column            | Short name                                                                                   |
+    # One field at a time: "I set the following fields" would first try to expand the form behind the dialogue.
+    And I set the field "Report link" in the "Power BI report" "dialogue" to "https://app.powerbi.com/groups/me/reports/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/ReportSection1"
+    And I set the field "Title" in the "Power BI report" "dialogue" to "Course enrolments"
+    And I set the field "Height (pixels)" in the "Power BI report" "dialogue" to "450"
+    And I set the field "Filter the report by" in the "Power BI report" "dialogue" to "This course"
+    And I set the field "Table" in the "Power BI report" "dialogue" to "Course Info"
+    And I set the field "Column" in the "Power BI report" "dialogue" to "Short name"
     And I click on "Insert report" "button" in the "Power BI report" "dialogue"
     And I press "Save and display"
     Then "figure.filter-powerbi iframe[title='Course enrolments']" "css_element" should exist

@@ -50,6 +50,8 @@ final class browse_test extends \advanced_testcase {
 
     /**
      * Workspaces, then reports, then pages in their order.
+     *
+     * @covers \tiny_powerbi\external\browse
      */
     public function test_execute(): void {
         $this->resetAfterTest();
@@ -73,6 +75,8 @@ final class browse_test extends \advanced_testcase {
 
     /**
      * Students cannot list reports.
+     *
+     * @covers \tiny_powerbi\external\browse
      */
     public function test_requires_capability(): void {
         $this->resetAfterTest();
@@ -84,6 +88,8 @@ final class browse_test extends \advanced_testcase {
 
     /**
      * Power BI errors are returned for the dialogue to show, not thrown.
+     *
+     * @covers \tiny_powerbi\external\browse
      */
     public function test_error(): void {
         $this->resetAfterTest();
