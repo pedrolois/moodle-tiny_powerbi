@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (2026-11-11)
+
+- First stable release.
+
 ## 0.2.0 (2026-11-11)
 
 - Filter options come from the site: course, category, groups, cohorts, user and every profile field.
